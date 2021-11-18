@@ -1,0 +1,55 @@
+1.Create folder 'Test' in your home directory
+   mkdir Test
+
+2. Create below files
+  - employeelist
+  - skillset
+  cd Test
+  cat employeelist
+  cat skillset
+
+3.Create folder Test2 in home directory
+  cd /home
+  mkdir Test2
+  
+- create symbolink and hard link for skillset file 
+    cd Test
+    ln -s skillset file1
+    ln skillset file2
+
+-delete skillset file and check if hardlink and symbolic link file exists
+     rm skillset
+     cat file1 - error
+     cat file2- will display if content present
+
+- explain the difference b/n symbolic and hard links
+     symbolic link is the type of file that file another file
+     hardlink is the another name given to file
+
+     if original file is deleted the symbolic linked file will be and invalid file
+     if original file is deleted the hard linked file will be pointing to the same file as only the original name is deleted not the entire file
+
+4. Provide read and write permission to 'user2' group
+   test if user2 group users can access the file
+   chmod g+rw file1
+
+5.  Revoke write permission from user2 group and test the access again
+    chmod g+w file1
+
+6. Grant write permission for others and test it 
+    chmod o+w file1
+
+7. Revoke write permission for others and test again
+   chmod o+w file1
+
+8. Change the group of employeelist file to 'user3'test if user3 group have access
+    chgrp user3 employeelist
+
+9. Change ownership of the file to user5 and test
+   chown user5 file
+
+10.check how many employees are there  (hint: use wc command)
+    who | wc -l
+
+
+
