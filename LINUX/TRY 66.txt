@@ -1,0 +1,17 @@
+1. Convert all capital letters into small letters in file
+   tr A-z a-z < file1
+
+2. Remove all occurrences of numbers in file
+   tr -d "[0-9]*" < file
+
+3. remove all occurrences of spaces in a file
+   tr -d " " < file
+
+4. suppress multiple occurrence of spaces in long listing of filenames
+   ls -l >file1 | tr -s " " file1
+
+5. count the number of alphabets in the file
+   tr -d " " < file1| tr -d "[0-9]*" | wc -m
+
+6.count the occurrences of vowels in the given file
+  grep -o [aeiouAEIOU] file | wc -l

@@ -1,0 +1,14 @@
+1. Create a file which contains long listing of the files in root directory
+   ls -l / >file1
+
+2.Sort the file based on the filename descending order 
+  sort -d | sort -r
+
+3. Sort the file based only on the inode count
+   ls -i | sort -n
+
+4. Sort the file based on the user name and group name in reverse order
+   ls -l >file1 |sort -d file1 | sort -r file1
+
+5. Sort the file based on the file size and store the output in a file called sortedfile
+    ls -l >file1 |sort -n [-o sortedfile] file1

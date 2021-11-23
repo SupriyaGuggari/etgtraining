@@ -1,0 +1,7 @@
+Try the commands done with at using crontab
+
+Corntab
+
+33 17 11 * * * ls >file1
+
+00 00 9 * * * echo "good morning"

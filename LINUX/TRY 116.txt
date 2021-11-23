@@ -1,0 +1,22 @@
+1. Run a sort command of a large file at the background
+   Sort -u file1 &
+
+2. Run a sort command of a large file at the background using nohup
+   nohup sort -u file2 &
+
+3. Check what happens when you log off for the above
+   it will run in background and they will not terminate
+
+4.Write a command that sleeps for 5 seconds and then prints hello
+  sleep 5 second
+  echo 'hello'
+
+5. Find the pid of the vi process
+   ps -l / pid
+
+6.Run a shell command from vi and observe the parent id for that command
+   ps -l
+
+
+
+

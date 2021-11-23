@@ -1,0 +1,19 @@
+1. The 10th to 25th  lines in a file
+   tail +10 | head -15 file
+
+2. List only 10th line in a file
+   tail +10 | head -1  file
+
+3. List only the recently modified file in the current directory
+   ls -t  | head -5 
+
+4. List only the smallest file in the current directory
+   ls -lSr | head -5
+
+5. A data file is updated regularly, each day with 10 new records. New records are appended at the end. 
+    Write the command to print total number of records in the file.
+    wc -l file
+  
+  Write the command to list only the records entered 3 days before.    
+  tail -30 file
+

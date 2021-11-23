@@ -1,0 +1,49 @@
+1. Create a file using vi editor with the following contents
+   The basic calculator, bc, can do calculations to any precision that you specify. 
+   Therefore, if you know how to calculate pi and want to know its value to 20, 50, or 200 places,    
+   for example, use bc. 
+   This tool can add, subtract, multiply, divide, and raise a number to a power. It can take square 
+   roots, compute sines and cosines of angles, calculate exponentials and 
+   logarithms, and handle arctangents and Bessel functions
+
+2.Insert an heading at the beginning of the file
+  O
+  add heading
+
+3.Remove the second line in the file and try undo command
+  using arrow key move cursor to senond line
+  dd
+  u
+
+4.Search for all occurrences of bc 
+  esc 
+  /bc
+  n
+
+5.Remove the word number
+  using arrow keys move to number word
+  dw
+
+6.Replace all occurrences of char c in line1 only with C
+  esc
+  :1,1s/c/C/g
+
+7.Replace all occurrences of space with \t
+  :1,$s/ /\t/g
+
+8.copy line 1 to 3 and paste at the end of the file
+  change to command mode using esc
+  use arrow key move cursor to 1st line 
+  3yy
+  using arrow key move to last line
+  p
+
+9.delete last 3 lines
+  move cursor to last but 3rd line
+  3dd
+
+10.undo last 2 changes
+    u
+    u
+11.save your file as “bc_v2”
+   :w bc_v2

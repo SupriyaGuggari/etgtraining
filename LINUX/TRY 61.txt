@@ -1,0 +1,23 @@
+1. Lines containing A
+   grep "A" file1
+
+2. lines containing The at the beginning
+    grep "^[The]" file1
+
+3. lines  ending with  .
+   grep ".$" file1
+
+4. lines with a,b or c as the second letter
+    grep "^.[abc]" file1
+
+5. lines which contain def , deef or deeeef 
+   grep "[de*f]" file1
+
+6. lines not having numbers at the beginning 
+   grep "^[^0-9]" file1
+
+7. list only directories
+   ls | grep "^d"
+
+8. list out the C programs in the current directory which are using math library file (hint:  math library file - math.h)
+   ls | grep ".c$" 

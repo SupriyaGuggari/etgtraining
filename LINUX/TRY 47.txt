@@ -1,38 +1,41 @@
 1. Create file “File1”
-   cat File1
+   cat >File1
    this is file1
    this is second line
 
 2.Append 2 more lines to the same file
   cat >>File1
   third line
+  4th line
 
   cat File1 
    this is file1
    this is second line
    third line
+   4th line
 
 3.Create File2 with few lines
-  cat File2
+  cat >File2
   This is file2
   this contents few lines
 
 4. Display the contents of both File1 and File2
-    cat File1 File2
+    cat File1
+    cat File2
 
 5.Concatenate both File1 & 2
   Send the above output to File3
-  cat File1 File2 >File3
+  cat File1 File2 >File3 
 
 6.Read File1,File2,File3… File5 . Observe the output
  Redirect the errors of the above command to “errorlog”
-  cat File1,File2,File3,File4,File5 2>errorlog
+  cat File1 File2 File3 File4 File5 2>errorlog
 
 7. Concatenate name File1 to 5 and store it in File 10. if any errors, log them in the same file 
     cat File1 File2 File3 File4 File5 >File10  2>&1
 
 8.Copy File1 to File6. Add the errors to “errorlog”
-  cp Fil1 File2 2>errorlog
+  cp File1 File6 2>errorlog
 
 
   

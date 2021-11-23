@@ -1,0 +1,3 @@
+1.  A data file is updated regularly, each day with 10 new records. New records are always appended at the end.
+   The data file now has to split into smaller files having records entered in one day. The file names should begin with dataxx
+    split -10 data11

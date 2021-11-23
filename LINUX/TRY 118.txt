@@ -1,0 +1,14 @@
+1.Write a command which will print banner saying hello into a file about 3 minutes from now
+   at now+  3 minute
+   echo 'hello'
+
+2. Write the command to write the processes that will be running after 10 days into a file ‘processfile’
+   at now+ 10 day
+    
+3. Write the command to send birthday wishes to your friend, whose birthday is tomorrow
+    at 12 am nov 20 
+    write user1
+    happy birthday
+
+
+   
