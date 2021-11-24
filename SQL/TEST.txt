@@ -1,0 +1,27 @@
+1. List of employees who are consultants along with their department.
+
+    SELECT w.WORKER_ID,w.FIRST_NAME,w.LAST_NAME,t.WORKER_TITLE,w.DEPARTMENT
+    FROM Worker_Details w, Title t
+    WHERE W.WORKER_ID= T.WORKER_REF_ID AND  t.WORKER_TITLE= 'CONSULTANT';
+
+2.Display the name of employees having the highest salary in each department.
+
+WITH HIGHEST_SALARY 
+AS 
+(SELECT WORKER_ID,
+       DEPARTMENT,
+       FIRST_NAME ,
+       LAST_NAME,
+       SALARY,
+       DENSE_RANK() 
+       OVER
+       (PARTITION BY DEPARTMENT 
+       ORDER BY SALARY DESC) 
+       AS RowNum
+FROM Worker_Details)
+SELECT WORKER_ID, 
+       DEPARTMENT, 
+       FIRST_NAME+' '+LAST_NAME as 'FullName', 
+SALARY
+FROM HIGHEST_SALARY
+WHERE RowNum = 1;
